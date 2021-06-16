@@ -14,7 +14,6 @@ function nroRandom(){
     return Math.floor(Math.random() * 100000)
 }
 
-nroGestion = nroRandom()
 
 class Pedido{
     constructor(libro, autor, direccion){
@@ -24,7 +23,7 @@ class Pedido{
 
         if(libro && autor && direccion){
             let li = document.createElement("li")
-            li.textContent = `Nro. de gestión ${nroGestion} - El libro titulado ${libro}, del autor ${autor} será llevado a la dirección ${direccion}`
+            li.textContent = `Nro. de gestión ${nroRandom()} - El libro titulado ${libro}, del autor ${autor} será llevado a la dirección ${direccion}`
             ul.appendChild(li)
         }else{
             alert("Por favor complete todos los datos para continuar")
